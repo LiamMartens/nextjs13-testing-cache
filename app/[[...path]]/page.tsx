@@ -12,6 +12,8 @@ const allParams =  [
   { path: ['page-2'] },
 ];
 
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams(): Promise<Params[]> {
   return allParams
 }
