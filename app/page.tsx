@@ -2,8 +2,11 @@ import z from 'zod';
 import Link from 'next/link';
 import { cache } from 'react';
 
+export const revalidate = 0;
+
 const uuid = cache(async (ts?: number) => {
-  const response = await fetch('https://www.uuidtools.com/api/generate/v4', {
+  const response = await fetch('https://uuid-cf-test.liammartens.workers.dev/', {
+    method: 'POST',
     cache: ts ? 'no-cache' : 'default',
   })
     .then((x) => x.json());
