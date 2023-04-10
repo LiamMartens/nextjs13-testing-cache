@@ -1,8 +1,7 @@
 import { Nav } from '@/components/Nav'
-import '../globals.css'
+import './globals.css'
 
 type Params = {
-  path?: string[]
 }
 
 export const metadata = {
@@ -22,7 +21,6 @@ export default function RootLayout({
       <body>
         <Nav key="navbar" />
         {'PATH'}
-        {params?.path?.join('/')}
         {children}
       </body>
     </html>
